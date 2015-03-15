@@ -24,6 +24,7 @@ $(document).ready(
     playHadouken ();
     // show hadouken and animate it to the right of the screen
     $('.ryu-ready').hide();
+    $('.ryu-still').hide();
     $('.ryu-throwing').show();
     $('.hadouken').show().animate(
       {'left':'1280px'},
@@ -48,7 +49,8 @@ $(document).ready(
 
   .mouseup(function() {
     console.log('mouseup');
-    $('.ryu-ready').show();
+    $('.ryu-ready').hide();
+    $('.ryu-still').show();
     $('.ryu-throwing').hide();
     // ryu goes back to his ready position
   })
